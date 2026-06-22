@@ -1,0 +1,8 @@
+# ignore runtime artifacts
+GPT_INGEST/
+*.sqlite
+*.log
+*.db
+__pycache__/
+*.pyc
+.env
