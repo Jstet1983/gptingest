@@ -1,0 +1,25 @@
+if args.stats:
+
+    print()
+    print("===================================")
+    print("Embedding Queue Statistics")
+    print("===================================")
+
+    for status, count in conn.execute("""
+        SELECT status,
+               COUNT(*)
+        FROM embedding_queue
+        GROUP BY status
+        ORDER BY status
+    """):
+        print(f"{status:12} {count}")
+
+    total = conn.execute(
+        "SELECT COUNT(*) FROM embedding_queue"
+    ).fetchone()[0]
+
+    print("-----------------------------------")
+    print("Total:", total)
+    print("===================================")
+
+    raise SystemExit(0)

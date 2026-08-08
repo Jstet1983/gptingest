@@ -35,3 +35,8 @@ API_URL = "https://api.github.com"
 REQUEST_TIMEOUT = 60
 
 MAX_WORKERS = max(2, os.cpu_count() or 2)
+
+# Embedding configuration
+EMBEDDING_PROVIDER = "mock"
+EMBED_BATCH_SIZE = 32
+EMBED_MAX_RETRIES = 3

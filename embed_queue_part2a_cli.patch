@@ -1,0 +1,23 @@
+parser = argparse.ArgumentParser(
+    description="GitHub → GPT Ingester Embedding Queue"
+)
+
+parser.add_argument(
+    "--stats",
+    action="store_true",
+    help="Display queue statistics"
+)
+
+parser.add_argument(
+    "--reset",
+    action="store_true",
+    help="Clear the embedding queue"
+)
+
+parser.add_argument(
+    "--full",
+    action="store_true",
+    help="Rebuild queue from all chunks"
+)
+
+args = parser.parse_args()

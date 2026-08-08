@@ -1,0 +1,8 @@
+if args.reset:
+
+    conn.execute("DELETE FROM embedding_queue")
+    conn.commit()
+
+    print("Embedding queue cleared.")
+
+    raise SystemExit(0)
