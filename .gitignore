@@ -39,3 +39,9 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Documentation
+!*.txt
+!README*
+!CHANGELOG*
+!LICENSE*
