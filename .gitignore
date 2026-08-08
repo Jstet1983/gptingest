@@ -1,6 +1,9 @@
 # Secrets
 .env
 .env.*
+*.key
+*.pem
+*.token
 
 # Python
 __pycache__/
@@ -12,15 +15,17 @@ venv/
 
 # Runtime
 logs/
+*.log
 reports/
 output/
 cache/
 
-# Generated data
+# Generated ingestion data
 repos/
 db/*.db
 db/*.sqlite
 db/*.sqlite3
+GPT_INGEST/
 
 # Build
 build/
@@ -34,9 +39,3 @@ dist/
 # OS
 .DS_Store
 Thumbs.db
-
-# Keep documentation
-!*.txt
-!README*
-!CHANGELOG*
-!LICENSE*
