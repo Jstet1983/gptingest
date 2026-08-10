@@ -49,7 +49,8 @@ class SQLiteVectorStore(VectorStore):
             PRIMARY KEY(
                 repository,
                 relative_path,
-                chunk_index
+                chunk_index,
+                model
             )
         )
         """)

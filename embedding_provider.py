@@ -5,6 +5,7 @@ from __future__ import annotations
 from providers.base import EmbeddingProvider
 from providers.mock_provider import MockProvider
 from providers.openai_provider import OpenAIProvider
+from providers.mistral_provider import MistralProvider
 
 
 def load_provider(name: str = "mock") -> EmbeddingProvider:
@@ -16,6 +17,9 @@ def load_provider(name: str = "mock") -> EmbeddingProvider:
 
     if name == "openai":
         return OpenAIProvider()
+
+    if name == "mistral":
+        return MistralProvider()
 
     raise ValueError(
         f"Unknown embedding provider: {name}"
